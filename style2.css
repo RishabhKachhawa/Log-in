@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.register-container {
+    background: #fff;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 30px;
+    border-radius: 14px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0f2027;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 22px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: #999;
+    font-size: 14px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-bottom-color: #0f2027;
+}
+
+.input-box input:focus+label,
+.input-box input:valid+label {
+    top: -6px;
+    font-size: 12px;
+    color: #0f2027;
+}
+
+.terms {
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.terms a {
+    color: #0f2027;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0f2027;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1b3a4b;
+    transform: translateY(-2px);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #0f2027;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width:480px) {
+    .register-container {
+        padding: 30px 20px;
+    }
+}
